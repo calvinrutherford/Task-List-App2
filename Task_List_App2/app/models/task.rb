@@ -1,5 +1,5 @@
 class Task < ActiveRecord::Base
-	belongs_to :TaskList
+	belongs_to :task_list
 
 	validates :title, :priority, :duedate, :Task_List_id, presence: { message: "must be present" }
 

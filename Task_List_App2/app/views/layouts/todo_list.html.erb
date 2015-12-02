@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TaskListApp2</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<header>
+To Do List
+</header>
+<div id="primary">
+</div>
+<div id="sidebar">
+  <strong>Task Lists:</strong>
+<ul>
+  <% @all_task_lists.each do | task | %>
+    <li><%= link_to task.name, task %> </li>
+  <% end %>
+</ul>
+	
+</div>
+</body>
+</html>
